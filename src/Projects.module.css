@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.projects-section {
+    flex-direction: row;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+  ::-webkit-scrollbar{
+    display: none;
+  }
+.projects-section h1{
+    width: 85%;
+    margin-left: auto;
+    font-family: 'Rubik', sans-serif;
+}
+.cards{
+    min-width: 300px !important;
+    height: 200px;
+    border: 1px #dedede solid;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.25 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba(121, 121, 121, 0.18);
+}
+.cards:first-child{
+    margin-left:14% ;
+}
+.cards h3 {
+    text-align: start;
+    font-family: 'Rubik', sans-serif;
+}
+.cards p {
+    flex: 1;
+    text-align: start;
+    font-weight: 350;
+    font-size: 14px;
+    color: #979797;
+}
+.scrollCards{
+    display: flex;
+    overflow-x: auto;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #979797;
+    border-radius: 10px;
+}
+
+.avatar:nth-child(1){
+    background-image: url("https://play-lh.googleusercontent.com/Hvw25BrA9MMkF6wsEYAsLALW91m3F1oUGtpYX84Pgsh1-V53yM5kDhx_5kO7mIdCFo4=s96-rw");
+    background-size: cover;
+}

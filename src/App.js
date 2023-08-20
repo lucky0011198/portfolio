@@ -1,53 +1,54 @@
-import logo from "./logo.svg";
+import hero from "./Asset/hero.svg";
 import "./App.css";
+import styles from './Hero.module.css';
+import Profile from "./Profile";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Layout from "./Layout";
 
-let iconstyle  = {
-width:"23",
-height:"23",
-color:"#3d3d3d"
-}
+
+let iconstyle = {
+  width: "23",
+  height: "23",
+  color: "#3d3d3d",
+};
 
 const nav = {
   home: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      id="Outline"
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
-      fill="#FFFF"
-      className="icons"
-    >
-      <path d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z" />
-    </svg>
+    <span
+      dangerouslySetInnerHTML={{
+        __html: `<lord-icon
+    src="https://cdn.lordicon.com/osuxyevn.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    state="hover-3"
+    style="width:25px;height:30px">
+</lord-icon>`,
+      }}
+    ></span>
   ),
   About: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      id="Outline"
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
-      className="icons"
-      fill={iconstyle.color}
-    >
-      <path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z" />
-      <path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z" />
-    </svg>
+    <span
+      dangerouslySetInnerHTML={{
+        __html: `<lord-icon
+    src="https://cdn.lordicon.com/bhfjfgqz.json"
+    trigger="hover"
+    colors="primary:#121331"
+    style="width:25px;height:30px">
+</lord-icon>`,
+      }}
+    ></span>
   ),
   Projects: (
-    <svg
-      id="Layer_1"
-      height="30"
-      viewBox="0 0 24 24"
-      width="25"
-      xmlns="http://www.w3.org/2000/svg"
-      data-name="Layer 1"
-      className="icons"
-      fill={iconstyle.color}
-    >
-      <path d="m17.994 2.286a9 9 0 0 0 -14.919 5.536 8.938 8.938 0 0 0 2.793 7.761 6.263 6.263 0 0 1 2.132 4.566v.161a3.694 3.694 0 0 0 3.69 3.69h.62a3.694 3.694 0 0 0 3.69-3.69v-.549a5.323 5.323 0 0 1 1.932-4 8.994 8.994 0 0 0 .062-13.477zm-5.684 19.714h-.62a1.692 1.692 0 0 1 -1.69-1.69s-.007-.26-.008-.31h4.008v.31a1.692 1.692 0 0 1 -1.69 1.69zm4.3-7.741a7.667 7.667 0 0 0 -2.364 3.741h-1.246v-7.184a3 3 0 0 0 2-2.816 1 1 0 0 0 -2 0 1 1 0 0 1 -2 0 1 1 0 0 0 -2 0 3 3 0 0 0 2 2.816v7.184h-1.322a8.634 8.634 0 0 0 -2.448-3.881 7 7 0 0 1 3.951-12.073 7.452 7.452 0 0 1 .828-.046 6.921 6.921 0 0 1 4.652 1.778 6.993 6.993 0 0 1 -.048 10.481z" />
-    </svg>
+    <span
+      dangerouslySetInnerHTML={{
+        __html: `<lord-icon
+    src="https://cdn.lordicon.com/gigfpovs.json"
+    trigger="hover"
+    style="width:25px;height:30px">
+</lord-icon>`,
+      }}
+    ></span>
   ),
   Contact: (
     <svg
@@ -63,16 +64,159 @@ const nav = {
   ),
 };
 
+const Icons = {
+  scrollDown: (<span
+    dangerouslySetInnerHTML={{
+      __html:`<lord-icon
+      src="https://cdn.lordicon.com/wtfdpwey.json"
+      trigger="loop"
+      colors="primary:#121331,secondary:#08a88a"
+      style="width:50px;height:50px">
+   </lord-icon>`,
+}}></span>)
+} 
+
+let Hero = () => {
+  return (
+    // <div className="hero center">
+    //   <div className="hero-content center">
+    //     {" "}
+    //     <div>
+    //       <p>
+    //         {" "}
+    //         <b>Hello !</b> my name is
+    //       </p>
+    //       <h1>Laxmikant varkal</h1>
+    //       <span className="tags primary">
+    //         {" "}
+    //         <b>Front-end developer</b>
+    //       </span>{" "}
+    //       <span className="tags secondary">
+    //         <b>UI / UX</b>
+    //       </span>
+    //     </div>
+    //   </div>
+    //   <div className="img">
+    //     <img src={hero} alt="React Logo" width="100%" />
+    //   </div>
+    // </div>
+    <Layout>
+    <div className={styles.hero}>
+      <div className={styles.heroBackground} style={{ backgroundImage: "url('path/to/your/image.jpg')" }}></div>
+      <div className={styles.heroContent}>
+        <h1 className={styles.header}>
+          <span>Hello I'm </span>
+     
+         Laxmikant varkal</h1>
+        <p className={styles.description}>Passionate Web Developer</p>
+        <div className={styles.socialLinks}>
+          <a href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/windows/64/github.png" alt="Github" className={styles.socialIcon} />
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" className={styles.socialIcon} />
+          </a>
+          <a href="https://github.com/your-github-profile" width="64" target="_blank" rel="noopener noreferrer">
+            <img  width="64" height="64"  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-color-tal-revivo.png" alt="GitHub" className={styles.socialIcon} />
+          </a>
+        </div>
+      
+        <span className={styles.scroll}>{Icons.scrollDown}</span>
+      </div>
+    </div>
+    </Layout>
+   
+  );
+};
+ 
+let About = ()=>{
+  return (
+    <div class="container backgroundC">
+<div class="row"></div>
+<div class="row">
+<span>
+Experienced web developer with a strong background in web and android development. 
+Proficient in developing responsive web applications using technologies such as <b>HTML, CSS, JavaScript</b> , and <b>React</b>. 
+Seeking an opportunity to utilize my skills in a challenging and dynamic work environment
+</span>
+</div>
+
+    </div>
+  )
+} 
+
+let Divider = ()=>{
+  return(
+    <div className="divider">
+       <span>About me
+        </span>   
+    </div>
+    
+  )
+}
+
+// Footer.js
+// Footer.js
+
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        
+        <p>Email: varkallaxmikant62@gmail.com</p>
+        
+        <div className="social-links">
+          <a href="https://www.linkedin.com/yourusername" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        </div>
+        {/* <div className="footer-nav">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div> */}
+       <hr></hr>
+        <p>&copy; {new Date().getFullYear()} Laxmikant varkal. All rights reserved.</p>
+        
+      </div>
+    </footer>
+  );
+};
+
+
 function App() {
   return (
     <div className="App">
+      <header className="nav"></header>
       <header className="App-Nav">
-        {[nav.home, nav.About, nav.Projects, nav.Contact].map((icon,i) => (
-          <div className="avatar">{icon}
-           <span class="tooltip">{Object.keys(nav)[i]}</span>
-          </div>
+        {[nav.home, nav.About, nav.Projects, nav.Contact].map((icon, i) => (
+          <a href={`#${Object.keys(nav)[i]}`} className="avatar">
+            {icon}
+            <a class="tooltip">{Object.keys(nav)[i]}</a>
+          </a>
         ))}
       </header>
+      <Hero />
+      <br></br>
+      <br></br>
+      <Profile/>
+      <br></br>
+      <br></br>
+      <Projects/>
+      <br></br>
+      <br></br>
+      <Contact/>
+      <br></br>
+      <br></br>
+      <Footer/>
     </div>
   );
 }

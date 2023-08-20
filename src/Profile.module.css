@@ -1,0 +1,160 @@
+/* ProfileSection.css */
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-self: center;
+    margin: auto;
+    padding-top: 40px;
+  }
+  .col,.col-Experience,.col-skills{
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+  }
+  .col-Experience {
+    margin-right: 50px;
+    border-radius: 40px;
+  }
+  .col-Experience h1 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    color: rgb(98, 98, 255);
+  }
+
+  .col-skills {
+  margin: 0px !important;
+  }
+  .col-skills p{
+    margin: 0px !important;
+  }
+
+  .sub-header {
+    color: rgb(98, 98, 255);
+  }
+ 
+  .cards{
+    height: 200px;
+    width:280px;
+    background-color:beige
+    ;margin: 10px 0 10px 0;
+  }
+
+  .profile-cards .cards h3,.cards p,a{
+    margin: 25px;
+  }
+
+  .profile-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .profile-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: center;
+    margin: auto;
+    padding-top: 40px;
+
+  }
+
+  .profile-header{
+    margin: auto;
+  }
+
+ .profile-header h1{
+  font-size: 4rem;
+  width: 70%;
+  align-self: center;
+  margin: auto;
+ }
+
+  
+  .profile-picture img {
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;    
+  }
+
+  .profile-info {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+  }
+  
+  .profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .profile-picture h1{
+    text-align: center;
+    font-size:60px;
+    font-weight: 800;
+    width: 300px;
+    height: 140px;
+  }
+  .profile-picture h1 p {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .profile-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .profile-picture h1{
+    background-color: beige;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .progress-bar{
+    width: 150px;
+    height: 20px;
+    background-color: aqua;
+
+  }
+
+  table{
+    flex: 1;
+    width: 100%;
+  }
+
+
+  tr {
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+ 
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .profile-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-cards .cards h3,.cards p,a{
+      margin: 20px;
+    }
+    
+    .profile-picture img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+
+
+
+  
+  
