@@ -3,7 +3,7 @@
 .projects-section {
     flex-direction: row;
     width: 100%;
-    align-self: center;
+    align-self:flex-start;
     margin: auto;
     padding-top: 20px;
     padding-bottom: 100px;
@@ -11,13 +11,16 @@
   ::-webkit-scrollbar{
     display: none;
   }
-.projects-section h1{
+.projects-section h1 {
     width: 85%;
     margin-left: auto;
     font-family: 'Rubik', sans-serif;
 }
+
 .cards{
-    min-width: 300px !important;
+    max-width: 300px;
+    position: relative;
+    min-width: 400px !important;
     height: 200px;
     border: 1px #dedede solid;
     padding: 30px;
@@ -46,6 +49,21 @@ border: 1px solid rgba(121, 121, 121, 0.18);
 .scrollCards{
     display: flex;
     overflow-x: auto;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.headers{
+    display: inline;
+    flex-direction: row;
+    width: 70%;
+    align-self: center;
+    background-color: blue;
+    margin-left: 14%;
+}
+
+.headers:first-child{
+    font-size: 1rem;
 }
 
 .avatar{
@@ -55,7 +73,12 @@ border: 1px solid rgba(121, 121, 121, 0.18);
     border-radius: 10px;
 }
 
-.avatar:nth-child(1){
+/* .avatar:nth-child(1){
     background-image: url("https://play-lh.googleusercontent.com/Hvw25BrA9MMkF6wsEYAsLALW91m3F1oUGtpYX84Pgsh1-V53yM5kDhx_5kO7mIdCFo4=s96-rw");
     background-size: cover;
-}
+} */
+.export{
+    position:absolute;
+    bottom: 25px;
+    right: 10px;
+  }

@@ -22,27 +22,27 @@ Seeking an opportunity to utilize my skills in a challenging and dynamic work en
        
     </section>
     <section className={styles['profile-section']}>
-     <div className={styles['col-Experience']}>
+     {/* <div className={styles['col-Experience']}>
       <h1 className={styles['sub-header']}>Experience</h1>
       <p>Company : <strong>  Cumulus System</strong>  </p>
       <p>Designation : <strong>Associate Software Engineer</strong>  </p>
       <p>Experience : <strong> 1+  Years</strong></p>
      
-    </div>
+    </div> */}
     <div className={styles['col-skills']}>
-      <h1 className={styles['sub-header']}>Skills</h1>
+      <p className={styles['sub-header']}>Experience</p>
       <table>
         <tr>
-            <td>HTML, CSS, JS</td>
-            <td style={{paddingRight:10}}> intermediat</td>
+            <td>Company</td>
+            <td > Cumulus System</td>
         </tr>
         <tr>
-            <td>React js, React Native</td>
-            <td>  intermediat</td>
+            <td>Designation</td>
+            <td>Associate Software Engineer</td>
         </tr>
         <tr>
-            <td>Angular</td>
-            <td>  intermediat</td>
+            <td>Experience</td>
+            <td>1+  Years</td>
         </tr>
     </table>
       {/* <div style={{display:'flex',justifyContent:'space-between'}}>
@@ -58,6 +58,32 @@ Seeking an opportunity to utilize my skills in a challenging and dynamic work en
 
       </span>
       </div> */}
+    </div>
+    <br></br>
+    <div className={styles['col-skills']}>
+      <p className={styles['sub-header']} style={{marginLeft:5}}>Skills</p>
+      {/* <table>
+        <tr>
+            <td>HTML, CSS, JS</td>
+            <td> intermediat</td>
+        </tr>
+        <tr>
+            <td>React js, React Native</td>
+            <td>  intermediat</td>
+        </tr>
+        <tr>
+            <td>Angular</td>
+            <td>  intermediat</td>
+        </tr>
+    </table> */}
+    <div className='flexRow'>
+
+    {
+      ["HTML","CSS","Javascript","React","React Native","Angular"].map((name)=>(
+        <span className='tags tagsAlignment'>{name}</span>
+      ))
+    }
+    </div>
     </div>
     </section>
    

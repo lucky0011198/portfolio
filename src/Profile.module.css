@@ -26,6 +26,9 @@
   }
   .col-skills p{
     margin: 0px !important;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-bottom: 16px;
   }
 
   .sub-header {
@@ -129,19 +132,19 @@
   }
 
 
-  tr {
-    text-align: left;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-  }
-
- 
+td{
+  padding: 5px 0px;
+  text-align: start;
+}
   
   /* Media Queries for Responsiveness */
   @media screen and (max-width: 768px) {
+    td:nth-child(2){
+      text-align: end;
+    }
     .profile-section {
       flex-direction: column;
-      text-align: center;
+      width: 70%;
     }
     .profile-cards .cards h3,.cards p,a{
       margin: 20px;
@@ -152,7 +155,6 @@
       height: 150px;
     }
   }
-
 
 
 

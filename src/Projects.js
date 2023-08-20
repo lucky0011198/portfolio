@@ -1,32 +1,46 @@
 import React from 'react';
 import Styles from "./Projects.module.css"
+import Info from "./Content"
+
 export default  function Projects(){
-const cardsData = [
-    {name:"Attendance",content:"",link:""},
-    {name:"Timetable",content:"",link:""},
-    {name:"Resume",content:"",link:""},
-    {name:"",content:"",link:""},
-]
-    const Cards = ({title,content,index}) =>{
+
+    const [ Switch,setswitch] = React.useState(false)
+
+    const Cards = ({title,content,index,link,icon}) =>{
         return ( 
             <div key={index} className={Styles['cards']}>
-                <div  className={Styles['avatar']}></div>
+                <img src={icon} className={Styles['avatar']} alt="Logo" />
                 <h3>{title}</h3>
                 <p>{content}</p>
+                <div className={Styles['export']}><a href={link}>View more</a></div>
             </div>
         )
     }
 
     return (
   <section  className={Styles['projects-section']}>
-    <h1>Projects</h1>
+    <div className={Styles['headers']}>
+    <span>Projects</span> 
+    <span>android app</span>
+    </div>
+    {
+        Switch?
     <div className={Styles['scrollCards']}>
         {
-            cardsData.map((item,index)=>(
-                <Cards index={index} icon={""}title={"card title"} content={" will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy '"}/>
+            Info.projects.map((item,index)=>(
+                <Cards  link={item.link} index={index} icon={item.icon}title={item.title} content={item.description}/>
+            ))
+        }
+    </div>:
+    <div className={Styles['scrollCards']}>
+        {
+            Info.projects.map((item,index)=>(
+                <Cards link={item.link} index={index} icon={item.icon}title={item.title} content={item.description}/>
             ))
         }
     </div>
+    }
+
   </section>
 
     )

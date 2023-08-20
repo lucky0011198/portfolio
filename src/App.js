@@ -77,30 +77,7 @@ const Icons = {
 } 
 
 let Hero = () => {
-  return (
-    // <div className="hero center">
-    //   <div className="hero-content center">
-    //     {" "}
-    //     <div>
-    //       <p>
-    //         {" "}
-    //         <b>Hello !</b> my name is
-    //       </p>
-    //       <h1>Laxmikant varkal</h1>
-    //       <span className="tags primary">
-    //         {" "}
-    //         <b>Front-end developer</b>
-    //       </span>{" "}
-    //       <span className="tags secondary">
-    //         <b>UI / UX</b>
-    //       </span>
-    //     </div>
-    //   </div>
-    //   <div className="img">
-    //     <img src={hero} alt="React Logo" width="100%" />
-    //   </div>
-    // </div>
-    <Layout>
+  return (  
     <div className={styles.hero}>
       <div className={styles.heroBackground} style={{ backgroundImage: "url('path/to/your/image.jpg')" }}></div>
       <div className={styles.heroContent}>
@@ -109,7 +86,7 @@ let Hero = () => {
      
          Laxmikant varkal</h1>
         <p className={styles.description}>Passionate Web Developer</p>
-        <div className={styles.socialLinks}>
+        {/* <div className={styles.socialLinks}>
           <a href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener noreferrer">
             <img src="https://img.icons8.com/windows/64/github.png" alt="Github" className={styles.socialIcon} />
           </a>
@@ -119,12 +96,11 @@ let Hero = () => {
           <a href="https://github.com/your-github-profile" width="64" target="_blank" rel="noopener noreferrer">
             <img  width="64" height="64"  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-color-tal-revivo.png" alt="GitHub" className={styles.socialIcon} />
           </a>
-        </div>
+        </div> */}
       
         <span className={styles.scroll}>{Icons.scrollDown}</span>
       </div>
     </div>
-    </Layout>
    
   );
 };

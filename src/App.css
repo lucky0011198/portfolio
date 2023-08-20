@@ -112,16 +112,30 @@ html {
 }
 
 
+
+
+.mL{
+  margin-left: 5px;
+}
+
+.flexRow{
+display: flex;
+justify-content: flex-start;
+flex-direction: row;
+flex-wrap: wrap;
+gap:10px
+}
+
 .tags {
+  color: #000000;
   text-align: center;
   padding: 7px 15px;
   border-radius: 10px;
-  color: #f9f9f9;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Nunito", sans-serif;
-  box-shadow: rgba(75, 75, 232, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.395) 0px 8px 16px -8px;
+  border: #c0bfbf 1px solid;
 }
+
 .head{
   display: flex;
 width:100%;
@@ -135,6 +149,7 @@ align-items: center;
 
 .primary {
   background-color: #3d8df0;
+  color: white !important;
 }
 .secondary {
   background-color: rgb(116, 116, 116);
