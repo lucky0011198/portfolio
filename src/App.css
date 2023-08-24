@@ -269,28 +269,7 @@ align-items: center;
 .ctaButton:hover {
   background-color: #0056b3;
 }
-.divider{
-display: grid;
-place-items: center;
-height: 40px;
-width: 100%;
-align-items: center;
-margin-top: 50px;
-}
-.divider span{
-display: flex;
-flex-direction: row;
- justify-self: center;
- margin-right: 52%;
- font-family: "Nunito", sans-serif;
- font-weight: 500;
- font-size: 1.2rem;
- border: #ddd 1px solid;
- border-radius: 40px;
- padding: 10px;
 
-
-}
 
 
 /* Footer.css */

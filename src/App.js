@@ -1,18 +1,17 @@
-import hero from "./Asset/hero.svg";
 import "./App.css";
 import styles from './Hero.module.css';
 import Profile from "./Profile";
 import Projects from "./Projects";
-import Contact from "./Contact";
-import Layout from "./Layout";
+// import Contact from "./Contact";
+// import Layout from "./Layout";
 import { useState } from "react";
 
 
-let iconstyle = {
-  width: "23",
-  height: "23",
-  color: "#3d3d3d",
-};
+// let iconstyle = {
+//   width: "23",
+//   height: "23",
+//   color: "#3d3d3d",
+// };
 
 const nav = {
   home: (
@@ -105,34 +104,6 @@ let Hero = () => {
   );
 };
  
-let About = ()=>{
-  return (
-    <div class="container backgroundC">
-<div class="row"></div>
-<div class="row">
-<span>
-Experienced web developer with a strong background in web and android development. 
-Proficient in developing responsive web applications using technologies such as <b>HTML, CSS, JavaScript</b> , and <b>React</b>. 
-Seeking an opportunity to utilize my skills in a challenging and dynamic work environment
-</span>
-</div>
-
-    </div>
-  )
-} 
-
-let Divider = ()=>{
-  return(
-    <div className="divider">
-       <span>About me
-        </span>   
-    </div>
-    
-  )
-}
-
-// Footer.js
-// Footer.js
 
 
 const Footer = () => {
@@ -140,7 +111,7 @@ const Footer = () => {
     <footer id="Contact" className="footer">
       <div className="container">
       <div>
-        <a href="">
+        <a href="mailto:varkallaxmikant62@gmail.com">
           varkallaxmikant62@gmail.com
         </a>
         {/* <span
@@ -193,7 +164,7 @@ function App() {
             setcurrent(i)
           }} href={`#${Object.keys(nav)[i]}`} className="avatar" style={{background:current===i?'rgb(174 255 229)':"white"}}>
             {icon}
-            <a class="tooltip">{Object.keys(nav)[i]}</a>
+            <span class="tooltip">{Object.keys(nav)[i]}</span>
           </a>
         ))}
       </header>
