@@ -5,6 +5,7 @@ import Profile from "./Profile";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Layout from "./Layout";
+import { useState } from "react";
 
 
 let iconstyle = {
@@ -20,8 +21,7 @@ const nav = {
         __html: `<lord-icon
     src="https://cdn.lordicon.com/osuxyevn.json"
     trigger="hover"
-    colors="primary:#ffffff"
-    state="hover-3"
+    colors="primary:#121331"
     style="width:25px;height:30px">
 </lord-icon>`,
       }}
@@ -51,16 +51,16 @@ const nav = {
     ></span>
   ),
   Contact: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      id="Outline"
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
-      fill={iconstyle.color}
-    >
-      <path d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z" />
-    </svg>
+    <span
+    dangerouslySetInnerHTML={{
+      __html: `<lord-icon
+      src="https://cdn.lordicon.com/diihvcfp.json"
+      trigger="hover"
+      colors="primary:#121331"
+      style="width:25px;height:25px">
+  </lord-icon>`,
+    }}
+  ></span>
   ),
 };
 
@@ -78,7 +78,7 @@ const Icons = {
 
 let Hero = () => {
   return (  
-    <div className={styles.hero}>
+    <div id="home" className={styles.hero}>
       <div className={styles.heroBackground} style={{ backgroundImage: "url('path/to/your/image.jpg')" }}></div>
       <div className={styles.heroContent}>
         <h1 className={styles.header}>
@@ -137,19 +137,33 @@ let Divider = ()=>{
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="Contact" className="footer">
       <div className="container">
-        
-        <p>Email: varkallaxmikant62@gmail.com</p>
+      <div>
+        <a href="">
+          varkallaxmikant62@gmail.com
+        </a>
+        {/* <span
+      dangerouslySetInnerHTML={{
+        __html: `<lord-icon
+        src="https://cdn.lordicon.com/diihvcfp.json"
+        trigger="hover"
+        colors="primary:#121331"
+        style="width:30px;height:30px">
+    </lord-icon>`,
+      }}
+    ></span> */}
+        <br></br>
+  </div>  
         
         <div className="social-links">
-          <a href="https://www.linkedin.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/laxmikant-varkal-489a8a1a5/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/lucky0011198" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/LVarkal14693" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </div>
@@ -169,12 +183,15 @@ const Footer = () => {
 
 
 function App() {
+  const [ current ,setcurrent]= useState(0);
   return (
     <div className="App">
       <header className="nav"></header>
       <header className="App-Nav">
         {[nav.home, nav.About, nav.Projects, nav.Contact].map((icon, i) => (
-          <a href={`#${Object.keys(nav)[i]}`} className="avatar">
+          <a onClick={()=>{
+            setcurrent(i)
+          }} href={`#${Object.keys(nav)[i]}`} className="avatar" style={{background:current===i?'rgb(174 255 229)':"white"}}>
             {icon}
             <a class="tooltip">{Object.keys(nav)[i]}</a>
           </a>
@@ -187,12 +204,17 @@ function App() {
       <br></br>
       <br></br>
       <Projects/>
+
+      {/* <div id="div-id">
+ <iframe src="https://youthful-shaw-f545e7.netlify.app/" onload="this.contentWindow.document.documentElement.scrollTop=100" id="iframe-id"></iframe>
+</div> */}
       <br></br>
       <br></br>
-      <Contact/>
+      {/* <Contact/> */}
       <br></br>
       <br></br>
       <Footer/>
+
     </div>
   );
 }

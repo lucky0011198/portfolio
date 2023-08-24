@@ -5,22 +5,28 @@ import hero from "./Asset/hero.svg";
 const Profile = () => {
   return (
     <>
+    <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+<div>
     <div id='About' className={styles['profile-header']}>
        <h1>
             About me 
         </h1>
     </div>
-    
     <section className={styles['profile-section']}>
      
-      <div className={styles['col']}>
-        <h2>Laxmikant Varkal</h2>
-        <p> Experienced web developer with a strong background in web and android development.
+     <div className={styles['col']}>
+       <h2>Laxmikant Varkal</h2>
+       <p> Experienced web developer with a strong background in web and android development.
 Seeking an opportunity to utilize my skills in a challenging and dynamic work environment.</p>
 
-      </div>
-       
-    </section>
+     </div>
+      
+   </section>
+</div>
+    {/* <img style={{backgroundColor:'red'}} width="10%" height="10%" src="https://i.pinimg.com/564x/58/98/ee/5898ee814db9ab73f9eadaf894bee4bd.jpg" alt="arrow"/> */}
+    </div>
+    
+   
     <section className={styles['profile-section']}>
      {/* <div className={styles['col-Experience']}>
       <h1 className={styles['sub-header']}>Experience</h1>
