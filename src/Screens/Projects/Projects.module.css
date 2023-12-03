@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .projects-section {
+    position: relative;
     flex-direction: row;
     width: 70%;
     align-self:center;
@@ -24,9 +25,8 @@
     max-width: fit-content;
     position: relative;
     min-width: 300px !important;
-    height: 200px;
+    height: 240px;
     border: 1px #dedede solid;
-    padding: 30px;
     border-radius: 10px;
     margin: 20px 0px;
     
@@ -48,7 +48,8 @@
 .scrollCards{
     display: flex;
     overflow-x: auto;
-    /* flex-direction: row;
+    position: relative;
+        /* flex-direction: row;
     flex-wrap: wrap; */
 }
 
@@ -84,4 +85,41 @@
   .export a{
     text-decoration: none;
     color: rgb(88, 88, 255);
+  }
+
+  .M-F-button,.M-B-button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0%;
+    bottom: -1;
+    box-shadow: #979797;
+    z-index: 99999;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .M-F-button:nth-child(1){
+    display: none;
+  }
+
+  .M-B-button:nth-child(2){
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .projects-section {
+        width: 90%;
+    }
+    .M-F-button:nth-child(1){
+        display: block;
+      }
+      .M-B-button:nth-child(2){
+        display: block;
+      }
+    .firstScrollBar{
+        display: block;
+    }
   }

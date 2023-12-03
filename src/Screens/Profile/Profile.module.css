@@ -18,7 +18,6 @@
   .col-Experience h1 {
     margin-block-start: 0px;
     margin-block-end: 0px;
-    color: rgb(98, 98, 255);
   }
 
   .col-skills {
@@ -34,6 +33,7 @@
 
   .sub-header {
     color: rgb(98, 98, 255);
+    padding-bottom: 0% !important;
   }
  
   .cards{
@@ -155,12 +155,15 @@ td{
   
   /* Media Queries for Responsiveness */
   @media screen and (max-width: 768px) {
+    .profile-container{
+      width:90%
+    }
     td:nth-child(2){
       text-align: end;
     }
     .profile-section {
       flex-direction: column;
-      width: 70%;
+      width: 85%;
     }
     .profile-cards .cards h3,.cards p,a{
       margin: 20px;
